@@ -47,3 +47,24 @@ class MyTime:
                     self.hour -= 1
                 else:
                     break
+
+
+    def sub_clock(self, other):
+        sec = self.sec - other.sec
+        min = self.min - other.min
+        hour = self.hour - other.hour
+
+        result = MyTime(hour, min, sec)
+        result.fix()
+        if result.hour <= 0:
+            time = MyTime(24, 0, 0, 0)
+            clock = result.sum(time)
+            return clock
+        else:
+            return 
+
+    def same_time(self, other):
+        if self.hour == other.hour and self.min == other.min:
+            return True
+        else:
+            return False
