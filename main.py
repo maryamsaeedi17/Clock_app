@@ -37,8 +37,8 @@ class MainWindow(QMainWindow):
         self.thread_alarm.start()
         self.thered_timer.signal_show.connect(self.notification)
 
-        self.thread_worldclock.show_signal.connect(self.show_clock)
-        self.thread_worldclock.start()
+        #self.thread_worldclock.show_signal.connect(self.show_clock)
+        #self.thread_worldclock.start()
 
 
 
@@ -155,8 +155,6 @@ class MainWindow(QMainWindow):
             msg_box.exec_()
 
     
-    def notification(self, title, hour, min):
-        print("OK!")
 
 
 
